@@ -72,5 +72,21 @@ namespace Localizatio.InMemory.Controllers
 
             return Ok(localization);
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            var localization = buildingContext.Localizations.Find(id);
+
+            if (localization != null)
+            {
+                buildingContext.Localizations.Remove(localization);
+                buildingContext.SaveChanges();
+            }
+            else
+                return NotFound();
+
+            return Ok();
+        }
     }
 }

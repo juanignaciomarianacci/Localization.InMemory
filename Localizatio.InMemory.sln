@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localizatio.InMemory", "Localizatio.InMemory.csproj", "{4BA488B9-E03C-4EF8-9889-695AE564E725}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BA488B9-E03C-4EF8-9889-695AE564E725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA488B9-E03C-4EF8-9889-695AE564E725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA488B9-E03C-4EF8-9889-695AE564E725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA488B9-E03C-4EF8-9889-695AE564E725}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DF07A1-54CC-45FC-9A1B-E10A29931534}
+	EndGlobalSection
+EndGlobal

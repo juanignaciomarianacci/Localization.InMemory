@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Localizatio.InMemory.Controllers
 
         [HttpGet]
         [Route("")]
+        [EnableCors("CorsApi")]
         public ActionResult Get()
         {
             return Ok(buildingContext.Localizations.ToList());
@@ -27,12 +29,14 @@ namespace Localizatio.InMemory.Controllers
 
         [HttpGet]
         [Route("{id}")]
+        [EnableCors("CorsApi")]
         public ActionResult Get(int id)
         {
             return Ok(buildingContext.Localizations.Find(id));
         }
 
         [HttpGet("localizations/{localization}")]
+        [EnableCors("CorsApi")]
         public ActionResult GetByLoc([FromRoute] string localization)
         {
             if (!string.IsNullOrEmpty(localization))
@@ -43,6 +47,7 @@ namespace Localizatio.InMemory.Controllers
 
         [HttpPut]
         [Route("")]
+        [EnableCors("CorsApi")]
         public ActionResult Put(int id, LocalizationRequest localizationRequest)
         {
             var localization = buildingContext.Localizations.Find(id);
@@ -58,6 +63,7 @@ namespace Localizatio.InMemory.Controllers
 
         [HttpPost]
         [Route("")]
+        [EnableCors("CorsApi")]
         public ActionResult Post(LocalizationRequest localizationRequest)
         {
             var localization = new Localizations
@@ -74,6 +80,7 @@ namespace Localizatio.InMemory.Controllers
         }
 
         [HttpDelete("{id}")]
+        [EnableCors("CorsApi")]
         public ActionResult Delete(int id)
         {
             var localization = buildingContext.Localizations.Find(id);
